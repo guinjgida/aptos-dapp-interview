@@ -1,0 +1,11 @@
+export const ABI = {"address":"1140fb62f9e9a358217001353ff184c96a5b04f8c601b35048fa8485e612f499",
+    "name":"interview",
+    "friends":[],
+    "exposed_functions":[{"name":"schedule_interview","visibility":"public","is_entry":true,"is_view":false,"generic_type_params":[],"params":["&signer","address","address","address","u64"],"return":[]},
+        {"name":"cancel_interview","visibility":"public","is_entry":true,"is_view":false,"generic_type_params":[],"params":["&signer","address","u64"],"return":[]},
+        {"name":"get_scheduled_interviews","visibility":"public","is_entry":false,"is_view":true,"generic_type_params":[],"params":["address"],"return":["vector<Interview>"]}],
+    "structs":[{"name":"Interview","is_native":false,"abilities":["key","copy","drop","store"],"generic_type_params":[],
+        "fields":[{"name":"interviewer","type":"address"},
+            {"name":"interviewee","type":"address"},{"name":"time_slot","type":"u64"}]},
+        {"name":"Interviews","is_native":false,"abilities":["key","drop","copy"],"generic_type_params":[],
+            "fields":[{"name":"interviews","type":"vector<1140fb62f9e9a358217001353ff184c96a5b04f8c601b35048fa8485e612f499::interview::Interview>"},]}]} as const
